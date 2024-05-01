@@ -1,0 +1,14 @@
+<form #f="ngForm" *ngIf="!check">
+    <div>
+        <label>שם משתמש</label>
+        <input type="text" #name="ngModel" [(ngModel)]="userData.username" name="user" [maxlength]="10" required>
+
+    </div>
+    <label *ngIf="!name.value&&check2">הכנס שם משתמש</label>
+    <div>
+        <label>סיסמה</label>
+        <input type="password" #password="ngModel" [(ngModel)]="userData.password" name="password" [maxlength]="8" [minlength]="8" required>
+    </div>
+    <label *ngIf="!password.value&&check2">הכנס סיסמה</label>
+    <button type="button" (click)="loginClick()">לאישור</button>
+</form>
