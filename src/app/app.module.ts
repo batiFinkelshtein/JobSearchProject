@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './Components/home/home.component';
 import { JobComponent } from './Components/job/job.component';
 import { DetailsJobComponent } from './Components/details-job/details-job.component';
+import { JobListComponent } from './Components/job-list/job-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DetailsJobComponent } from './Components/details-job/details-job.compon
     HomeComponent,
     JobComponent,
     DetailsJobComponent,
+    JobListComponent,
 
   ],
   imports: [
