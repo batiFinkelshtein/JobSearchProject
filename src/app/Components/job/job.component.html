@@ -1,0 +1,12 @@
+<div id="job">
+    <h1>{{job?.JobName}}</h1>
+    <p>field: {{job?.jobfield}}</p>
+    <p>scope of hours: {{job?.ScopeOfHours}}</p>
+    <p>area: {{job?.area}}</p>
+    <p>requirements: {{job?.requirements}}</p>
+    <div [ngSwitch]="job?.WorkingFromHome">WorkingFromHome:
+        <p *ngSwitchCase="true">✔️</p>
+        <p *ngSwitchCase="false">❌</p>
+    </div>
+
+</div>
