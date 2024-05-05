@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Job } from '../../Models/Job';
+import { jobField } from '../../Models/JobField';
+import { CVComponent } from '../../services/cv.services';
 @Component({
   selector: 'app-job',
   templateUrl: './job.component.html',

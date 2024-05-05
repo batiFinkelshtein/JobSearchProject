@@ -1,5 +1,12 @@
 <div class="jobs-div">
-
+    <form ngForm>
+        <select #area name="" id="" (change)="changeArea(area.value,field.value)"> 
+            <option *ngFor=" let t of getAreas() " >{{t}}</option>
+        </select>
+        <select #field (change)="changeArea(area.value,field.value) "> 
+            <option *ngFor=" let t of getFields() " >{{t}}</option>
+        </select>
+    </form>
     <div *ngFor="let c of allJobs ">
 
         <div>
