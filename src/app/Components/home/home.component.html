@@ -1,8 +1,10 @@
 <header>
-    <div>
+    <div id="header">
+
+
         <div class="menu">
             <a [routerLink]="'/login'"><img src="../../../assets/תנונה חדשה.PNG " alt=" " srcset=" "></a>
-            <h4 appBoldName="'yello'">hello {{nameUser}} 🕵️</h4>
+            <h4 appBoldName="'orange'">hello {{nameUser}} 🕵️</h4>
             <a [routerLink]="'/jobs/'+GetjobField()">{{GetjobField()}} </a>
             <h4>count CV you send:{{getCount()}}</h4>
             <select>
@@ -14,7 +16,15 @@
 </header>
 <router-outlet></router-outlet>
 <footer>
-    <p>contact ☎️ 0556729929  📧
-        <a href=" mailto:b0556729929@gmail.com ">b0556729929gmail.com</a>  🧑‍💼 Batya Finkelshtein</p>
+    <div class="contact-info">
+        <h3>Contact details for the site manager:</h3>
+        <ul>
+            <li><strong>🧑‍💼 Name:</strong> Batya Finkelstein and Tamar Solomon</li>
+            <li><strong>☎️ Phone:</strong> 054-1234567</li>
+            <li><strong>📧 Email:</strong> b456gmail.com</li>
+            <li><strong>📠 Fax:</strong> 02-1234567</li>
+        </ul>
+    </div>
+
 
 </footer>

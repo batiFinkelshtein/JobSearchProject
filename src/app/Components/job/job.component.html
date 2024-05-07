@@ -1,9 +1,10 @@
-<div id="job">
-    <h1>{{job?.jobName}}</h1>
-    <p>field: {{myjobfield[job?.jobfield!]}}</p>
-    <p>area: {{MyArea[job?.area!]}}</p>
-    <p>requirements: {{job?.requirements}}</p>
-
+<div class="job-container" id="job">
+    <div id="job-div">
+        <h1>{{job?.jobName}}</h1>
+        <p>field: {{myjobfield[job?.jobfield!]}}</p>
+        <p>area: {{MyArea[job?.area!]}}</p>
+        <p>requirements: {{job?.requirements}}</p>
+    </div>
     <details>
         <summary style="color: rgb(110, 109, 107);">more details</summary>
         <div [ngSwitch]="job?.workingFromHome ">WorkingFromHome:
@@ -12,5 +13,5 @@
         </div>
         <p>scope of hours: {{job?.scopeOfHours}}</p>
     </details>
-    <button (click)="sendCV()">send CV</button>
+    <button [disabled]="ifSend()" (click)="sendCV()" [ngStyle]="{ 'opacity': ifSend() ? '0.5' : '1', 'cursor': ifSend() ? 'not-allowed' : 'pointer' }" (click)="sendCV()">send CV</button>
 </div>

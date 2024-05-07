@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './Components/home/home.component';
 import { JobComponent } from './Components/job/job.component';
-import { DetailsJobComponent } from './Components/details-job/details-job.component';
+
 import { JobListComponent } from './Components/job-list/job-list.component';
 import { BoldNameDirective } from './directives/bold-name.directive';
 
@@ -18,7 +18,6 @@ import { BoldNameDirective } from './directives/bold-name.directive';
     LoginComponent,
     HomeComponent,
     JobComponent,
-    DetailsJobComponent,
     JobListComponent,
     BoldNameDirective,
 

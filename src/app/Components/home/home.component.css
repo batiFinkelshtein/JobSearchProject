@@ -1,24 +1,76 @@
-footer {
-    background-color: rgb(248, 187, 20);
-}
-
 .menu {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-header{
-    background-color: black;
+
+a {
     color: rgb(241, 142, 105);
-    font-size: 30px;
-    display:flex;
-    flex-direction: row;
-    align-self: center;
-    text-align:center;
-    align-content: center;
-}
-a{
-    color:rgb(241, 142, 105); 
-    text-align:center;
+    text-align: center;
 }
 
+footer {
+    color: rgb(239, 145, 105);
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 5px;
+}
+
+.contact-info li strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.top-navigation {
+    color: rgb(239, 145, 105);
+}
+
+.top-navigation a {
+    color: rgb(239, 145, 105);
+}
+
+header {
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    text-align: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+header a {
+    margin-top: 1.5%;
+}
+
+header h4 {
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    margin-right: 3%;
+    color: rgb(239, 145, 105);
+}
+
+header select {
+    z-index: 5;
+}
+
+img {
+    width: 50%;
+}

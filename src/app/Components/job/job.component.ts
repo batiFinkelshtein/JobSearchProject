@@ -9,26 +9,26 @@ import { AREA } from '../../Models/Area';
   styleUrl: './job.component.css'
 })
 export class JobComponent {
-  constructor(private cvservice: CVComponent ) {
-    
+  constructor(private cvservice: CVComponent) {
+    this.jobsList = this.cvservice.jobSelect;
   }
-    @Input() job: Job | null = null;
-  click:boolean=false;
-  myjobfield=jobField;
-  MyArea=AREA;
-jobArea: any;
-  onclick(){
-this.click=!this.click;
-  }
-    // @Output() updateIsJoinToTrue = new EventEmitter<string>();
-    // @Output() updateIsJoinToFalse = new EventEmitter<string>();
-    // @Output() addCourse = new EventEmitter<string>();
-    // @Output() removeCourse = new EventEmitter<string>();
-    sendCV() 
-  {
-    this.cvservice.InsertJoB(this.job?.jobName!);
+  @Input() job: Job | null = null;
+  click: boolean = false;
+  myjobfield = jobField;
+  MyArea = AREA;
+  jobsList: string[] = [];
+  IfSend: boolean = false;
+  jobArea: any;
+  onclick() {
+    this.click = !this.click;
   }
 
- 
-  
+  sendCV() {
+    this.cvservice.InsertJoB(this.job?.jobName!);
+  }
+  ifSend() {
+    return this.job && this.job.jobName && this.jobsList.includes(this.job.jobName);
+  }
+
+
 }
