@@ -1,10 +1,10 @@
 import { jobField } from "./JobField"
 import { AREA } from "./Area"
 export interface Job {
-    JobName: string
+    jobName: string
     jobfield: jobField
-    ScopeOfHours: number
+    scopeOfHours: number
     area: AREA
     requirements: string
-    WorkingFromHome: boolean
+    workingFromHome: boolean
 }

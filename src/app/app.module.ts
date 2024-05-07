@@ -10,6 +10,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { JobComponent } from './Components/job/job.component';
 import { DetailsJobComponent } from './Components/details-job/details-job.component';
 import { JobListComponent } from './Components/job-list/job-list.component';
+import { BoldNameDirective } from './directives/bold-name.directive';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,16 @@ import { JobListComponent } from './Components/job-list/job-list.component';
     JobComponent,
     DetailsJobComponent,
     JobListComponent,
+    BoldNameDirective,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, RouterModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule
 
   ],
   providers: [

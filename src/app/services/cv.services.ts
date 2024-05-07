@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Observable, Observer } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CVComponent{
-jobSelect:string[]=[];
-InsertJoB(nameCompany:string){
+export class CVComponent {
+  jobSelect: string[] = [];
+  InsertJoB(nameCompany: string) {
     this.jobSelect.push(nameCompany);
-}
-CountRegister(){
-    return this.jobSelect.length;
-}
+  }
+  CountRegister() {
+    return this.jobSelect.length | 0;
+  }
 
 }

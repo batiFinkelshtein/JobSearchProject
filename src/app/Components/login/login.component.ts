@@ -26,8 +26,6 @@ export class LoginComponent {
   contains_heb = (str: string) => {
     return /[\u0590-\u05ff]/.test(str);
   }
-
-  @Output('CourseList') CourseList: EventEmitter<any> = new EventEmitter<any>()
 user: User = {
   Id: 0,
   Name: "",

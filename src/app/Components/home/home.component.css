@@ -7,3 +7,18 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
 }
+header{
+    background-color: black;
+    color: rgb(241, 142, 105);
+    font-size: 30px;
+    display:flex;
+    flex-direction: row;
+    align-self: center;
+    text-align:center;
+    align-content: center;
+}
+a{
+    color:rgb(241, 142, 105); 
+    text-align:center;
+}
+

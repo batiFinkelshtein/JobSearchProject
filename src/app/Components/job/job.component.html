@@ -1,12 +1,16 @@
 <div id="job">
-    <h1>{{job?.JobName}}</h1>
-    <p>field: {{job?.jobfield}}</p>
-    <p>scope of hours: {{job?.ScopeOfHours}}</p>
-    <p>area: {{job?.area}}</p>
+    <h1>{{job?.jobName}}</h1>
+    <p>field: {{myjobfield[job?.jobfield!]}}</p>
+    <p>area: {{MyArea[job?.area!]}}</p>
     <p>requirements: {{job?.requirements}}</p>
-    <div [ngSwitch]="job?.WorkingFromHome">WorkingFromHome:
-        <p *ngSwitchCase="true">✔️</p>
-        <p *ngSwitchCase="false">❌</p>
-    </div>
 
+    <details>
+        <summary style="color: rgb(110, 109, 107);">more details</summary>
+        <div [ngSwitch]="job?.workingFromHome ">WorkingFromHome:
+            <p *ngSwitchCase="true ">✔️</p>
+            <p *ngSwitchCase="false ">❌</p>
+        </div>
+        <p>scope of hours: {{job?.scopeOfHours}}</p>
+    </details>
+    <button (click)="sendCV()">send CV</button>
 </div>

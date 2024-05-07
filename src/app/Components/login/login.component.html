@@ -1,18 +1,14 @@
-<body>
+<form #f="ngForm" *ngIf="!check" class="login-form">
+    <div>
 
+        <input type="text" #name="ngModel" [(ngModel)]="user.Name" name="user" [maxlength]="10" required placeholder="enter name">
 
-    <form #f="ngForm" *ngIf="!check" class="login-form">
-        <div>
+    </div>
+    <label *ngIf="!name.value&&check2">הכנס שם משתמש</label>
+    <div>
 
-            <input type="text" #name="ngModel" [(ngModel)]="user.Name" name="user" [maxlength]="10" required placeholder="enter name">
-
-        </div>
-        <label *ngIf="!name.value&&check2">הכנס שם משתמש</label>
-        <div>
-
-            <input type="password" #password="ngModel" [(ngModel)]="user.password" name="password" [maxlength]="3" [minlength]="3" required placeholder="enter password">
-        </div>
-        <label *ngIf="!password.value&&check2">הכנס סיסמה</label>
-        <button type="button" (click)="loginClick()">לאישור</button>
-    </form>
-</body>
+        <input type="password" #password="ngModel" [(ngModel)]="user.password" name="password" [maxlength]="3" [minlength]="3" required placeholder="enter password">
+    </div>
+    <label *ngIf="!password.value&&check2">הכנס סיסמה</label>
+    <button type="button" (click)="loginClick()">לאישור</button>
+</form>
